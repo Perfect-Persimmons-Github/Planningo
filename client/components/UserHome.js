@@ -12,7 +12,7 @@ export const UserHome = props => {
       <h3>Welcome, {firstName}</h3>
       <h4>This is your dashboard. Here, you can access all of your productivity tools.</h4>
 
-      <Link to="/grocery">Grocery List</Link>
+      <Link to="/grocery">Grocery List-</Link>
 
     </div>
   );
