@@ -25,3 +25,6 @@ export { default as SingleGroup } from "./Groups/SingleGroup";
 
 //data vis
 export { default as MyStats } from "./DataVis/MyStats";
+
+//expenses
+export { default as Expenses } from "./Expenses/Expenses";

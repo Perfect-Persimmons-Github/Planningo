@@ -19,6 +19,7 @@ import {
   GroupTaskList,
   MyStats,
   Shopping,
+  Expenses,
 } from "./components";
 import { me } from "./store";
 
@@ -41,7 +42,6 @@ class Routes extends Component {
 
             <Route exact path={["/home", "/"]} component={UserHome} />
 
-
             <Route exact path="/account" component={Account} />
             <Route exact path="/account/settings" component={AccountSettings} />
             <Route path="/shopping" component={Shopping} />
@@ -62,6 +62,7 @@ class Routes extends Component {
               component={GroupGroceryList}
             />
             <Route exact path="/mystats" component={MyStats} />
+            <Route exact path="/expenses" component={Expenses} />
           </Switch>
         )}
         {/* Displays our Login component as a fallback */}
