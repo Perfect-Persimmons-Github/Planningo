@@ -29,7 +29,12 @@ class GroupShoppingList extends React.Component {
   componentDidMount() {
     this.props.fetchGroup(this.props.match.params.groupId);
   }
-
+  // componentDidUpdate(prevProps) {
+  //   // Typical usage (don't forget to compare props):
+  //   if (this.props.group.tasks !== prevProps.tasks) {
+  //     this.props.fetchGroup(this.props.match.params.groupId);
+  //   }
+  // }
   handleChange(event) {
     this.setState({
       [event.target.name]: event.target.value,
@@ -60,7 +65,6 @@ class GroupShoppingList extends React.Component {
     let categories = this.props.group.categories;
     return (
       <div className="task-wrapper">
-
         {this.state.show === true || this.state.showTask === true ? (
           <div id="darken-page"></div>
         ) : null}
@@ -140,7 +144,7 @@ class GroupShoppingList extends React.Component {
                           </p> */}
                             <p id="date-created">
                               {format(
-                                new Date(`${task.start}T07:00:00.000Z`),
+                                new Date(`${task.start}T12:00:00.000Z`),
                                 "MMM d"
                               )}
                             </p>

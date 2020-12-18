@@ -13,9 +13,7 @@ import "./Tasks.css";
 import { fetchGroupsThunk } from "../../store/allGroups";
 import { fetchTasksThunk, removeTaskThunk } from "../../store/tasks";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPlusSquare
-} from "@fortawesome/free-solid-svg-icons";
+import { faPlusSquare } from "@fortawesome/free-solid-svg-icons";
 import { faCheckCircle, faTrashAlt } from "@fortawesome/free-regular-svg-icons";
 import { format } from "date-fns";
 
@@ -69,6 +67,7 @@ class TaskList extends React.Component {
 
   render() {
     let { tasks } = this.props.userTasks;
+    console.log(this.props, "this.props in tasklist");
 
     return (
       <div className="task-wrapper">
@@ -123,7 +122,10 @@ class TaskList extends React.Component {
                             added {format(new Date(task.createdAt), "MMM d")}
                           </p> */}
                           <p id="date-created">
-                            {format(new Date(task.start), "MMM d")}
+                            {format(
+                              new Date(`${task.start}T12:00:00.000Z`),
+                              "MMM d"
+                            )}
                           </p>
                         </div>
 
@@ -153,9 +155,7 @@ class TaskList extends React.Component {
                 : null}
             </div>
             <div id="just-another-layout-div">
-              <div>
-                Filters
-              </div>
+              <div>Filters</div>
             </div>
           </div>
           <div id="add-button-div">
