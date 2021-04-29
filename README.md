@@ -4,6 +4,5 @@ Planningo is an all-in-one, reward-based productivity/life management app. In Pl
 
 Team Members: Nadia Collado, Dana Zhang and Sally Yoo
 
----
-
-URL: http://goplanningo.herokuapp.com/
+***
+URL: http://planningo.herokuapp.com/
